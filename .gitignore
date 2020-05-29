@@ -1,0 +1,7 @@
+.flaskenv
+.idea
+__pycache__
+.python-version
+.git
+.vscode
+app/templates/exam

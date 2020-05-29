@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block content %}
+    <h1>Hi, {{ current_user.username }}!</h1>
+    {% for post in posts %}
+    <div><p>{{ post.author.username }} says: <b>{{ post.body }}</b></p></div>
+    {% endfor %}
+{% endblock %}
+
+<!--<html>-->
+    <!--<head>-->
+        <!--{% if title %}-->
+        <!--<title>{{ title }} - microblog</title>-->
+        <!--{% else %}-->
+        <!--<title>Microblog</title>-->
+        <!--{% endif %}-->
+    <!--</head>-->
+    <!--<body>-->
+        <!--<h1>hello , {{ user.username }}!</h1>-->
+
+        <!--{% for post in posts %}-->
+        <!--<div><p>{{ post.author.username }} says: <b>{{ post.body }}</b></p></div>-->
+        <!--{% endfor %}-->
+
+
+        <!--<h2>输入标题：</h2>-->
+        <!--<input type="text">-->
+        <!--<h2>输入选项：</h2>-->
+        <!--<input type="text"><input type="checkbox">-->
+        <!--<input type="text"><input type="checkbox">-->
+        <!--<input type="text"><input type="checkbox">-->
+        <!--<input type="text"><input type="checkbox">-->
+
+        <!--<button type="submit">提交</button>-->
+    <!--</body>-->
+<!--</html>-->

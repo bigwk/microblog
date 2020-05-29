@@ -1,0 +1,71 @@
+{% extends "assessment/main.html" %}
+{% block content %}
+    <form action="" method="post" novalidate>
+        {{ add_scale_form.hidden_tag() }}
+        <p>
+            {{ add_scale_form.main_title.label }}<br>
+            {{ add_scale_form.main_title }}<br>
+            {% for error in add_scale_form.main_title.errors %}
+            <span style="color: red">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        <p>
+            {{ add_scale_form.sub_title.label }}<br>
+            {{ add_scale_form.sub_title }}<br>
+            {% for error in add_scale_form.sub_title.errors %}
+            <span style="color: red">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        <p>
+            {{ add_scale_form.desc.label }}<br>
+            {{ add_scale_form.desc }}<br>
+            {% for error in add_scale_form.desc.errors %}
+            <span style="color: red">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        <p>
+            {{ add_scale_form.need_know.label }}<br>
+            {{ add_scale_form.need_know }}<br>
+            {% for error in add_scale_form.need_know.errors %}
+            <span style="color: red">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        <p>
+            {{ add_scale_form.instruction.label }}<br>
+            {{ add_scale_form.instruction }}<br>
+            {% for error in add_scale_form.instruction.errors %}
+            <span style="color: red">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        <p>
+            {{ add_scale_form.topic_explanation.label }}<br>
+            {{ add_scale_form.topic_explanation }}<br>
+            {% for error in add_scale_form.topic_explanation.errors %}
+            <span style="color: red">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        <p>
+            {{ add_scale_form.topic_interpretation.label }}<br>
+            {{ add_scale_form.topic_interpretation }}<br>
+            {% for error in add_scale_form.topic_interpretation.errors %}
+            <span style="color: red">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        <p>
+            {{ add_scale_form.causes_performance.label }}<br>
+            {{ add_scale_form.causes_performance }}<br>
+            {% for error in add_scale_form.causes_performance.errors %}
+            <span style="color: red">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        <p>
+            {{ add_scale_form.suggest.label }}<br>
+            {{ add_scale_form.suggest }}<br>
+            {% for error in add_scale_form.suggest.errors %}
+            <span style="color: red">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        <p>{{ add_scale_form.submit() }}</p>
+    </form>
+
+{% endblock %}

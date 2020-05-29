@@ -1,0 +1,25 @@
+<html>
+    <head>
+        {% if title %}
+        <title>{{ title }} - 测评系统</title>
+        {% else %}
+        <title>测评系统</title>
+        {% endif %}
+    </head>
+    <body>
+        <div><h1>测评系统:</h1>
+            <br>
+            <a href="{{ url_for('scale') }}">量表列表</a>
+            <a href="{{ url_for('scale') }}">添加量表</a>
+            <a href="{{ url_for('scale') }}">量表类型</a>
+            <a href="{{ url_for('scale') }}">添加类型</a>
+            <a href="{{ url_for('scale') }}">测评列表</a>
+            <a href="{{ url_for('scale') }}">订单列表</a>
+            <a href="{{ url_for('scale') }}">用户列表</a>
+            <a href="{{ url_for('scale') }}">管理员列表</a>
+            <a href="{{ url_for('scale') }}">添加管理员</a>
+        </div>
+        <hr>
+        {% block content %}{% endblock %}
+    </body>
+</html>
